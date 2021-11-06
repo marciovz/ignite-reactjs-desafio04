@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import {api} from '../../services/api';
 import Food from '../../components/Food';
-import ModalAddFood from '../../components/ModalAddFood';
-import ModalEditFood from '../../components/ModalEditFood';
+import {ModalAddFood} from '../../components/ModalAddFood';
+import {ModalEditFood} from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
 
 interface IFood {
@@ -87,12 +87,15 @@ export function Dashboard () {
         setIsOpen={toggleModal}
         handleAddFood={handleAddFood}
       />
-      <ModalEditFood
-        isOpen={editModalOpen}
-        setIsOpen={toggleEditModal}
-        editingFood={editingFood}
-        handleUpdateFood={handleUpdateFood}
-      />
+
+      {editingFood &&
+        <ModalEditFood
+          isOpen={editModalOpen}
+          setIsOpen={toggleEditModal}
+          editingFood={editingFood}
+          handleUpdateFood={handleUpdateFood}
+        />
+      }
 
       <FoodsContainer data-testid="foods-list">
         {foods &&
@@ -109,4 +112,3 @@ export function Dashboard () {
   );
 };
 
-export default Dashboard;
