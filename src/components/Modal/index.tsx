@@ -44,5 +44,3 @@ export function Modal({isOpen, setIsOpen, children}: ModalProps) {
   );
 
 };
-
-export default Modal;

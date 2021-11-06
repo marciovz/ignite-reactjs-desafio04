@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { Form } from './styles';
-import Modal from '../Modal';
-import {Input} from '../Input';
+import { Modal } from '../Modal';
+import { Input } from '../Input';
 
 interface ModalEditFoodProps {
   isOpen: boolean;
