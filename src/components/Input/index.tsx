@@ -6,10 +6,10 @@ import {
   InputHTMLAttributes,
 } from 'react';
 
+import { IconType } from 'react-icons';
 import { useField } from '@unform/core';
 
 import { Container } from './styles';
-import { IconBaseProps, IconContext, IconType } from 'react-icons/lib';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
