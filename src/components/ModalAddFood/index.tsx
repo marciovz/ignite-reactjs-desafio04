@@ -24,7 +24,6 @@ export function ModalAddFood({isOpen, setIsOpen, handleAddFood }: ModalAddFoodPr
   const formRef = useRef(null);
 
   const handleSubmit = async (data: Food) => {
-
     handleAddFood(data);
     setIsOpen();
   };

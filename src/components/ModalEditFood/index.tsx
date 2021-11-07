@@ -24,13 +24,10 @@ interface Food {
 export function ModalEditFood({isOpen, setIsOpen, editingFood, handleUpdateFood }: ModalEditFoodProps) {
   const formRef = useRef(null);
 
-
-
   const handleSubmit = async (data: Food) => {
     handleUpdateFood(data);
     setIsOpen();
   };
-
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
